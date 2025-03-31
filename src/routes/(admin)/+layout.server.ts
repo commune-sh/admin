@@ -31,6 +31,15 @@ export const load: LayoutServerLoad = async ({ fetch, params, url, cookies, requ
         data.oidc_client_id = oidc_client_id
     }
 
+    const auth_url = `${PUBLIC_HOMESERVER}/_matrix/client/unstable/org.matrix.msc2965/auth_metadata`;
+
+    const res = await fetch(auth_url)
+	const auth_metadata = await res.json();
+    if(auth_metadata) {
+        data.auth_metadata = auth_metadata;
+    }
+
+
     return data;
 };
 
