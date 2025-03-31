@@ -53,12 +53,12 @@ async function listRooms() {
 </script>
 
 
-<div class="flex flex-cols gap-4">
+<div class="flex flex-cols gap-4 p-4">
     <div class="">
-        <button onclick={listUsers}>Get Users</button>
+        <button onclick={listUsers} class="text-sm">Get Users</button>
     </div>
     <div class="">
-        <button onclick={listRooms}>Get Rooms</button>
+        <button onclick={listRooms} class="text-sm">Get Rooms</button>
     </div>
 </div>
 
