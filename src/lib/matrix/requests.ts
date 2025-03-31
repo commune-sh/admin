@@ -2,6 +2,28 @@ import { PUBLIC_HOMESERVER, PUBLIC_BASE_URL } from '$env/static/public';
 
 import type { ValidatedAuthMetadata } from 'matrix-js-sdk/src/oidc/validate'
 
+export const MATRIX_BASE_URL = `${PUBLIC_HOMESERVER}/_matrix/client/v3`
+
+export const whoami = async (access_token: string) => {
+    const url = `${MATRIX_BASE_URL}/account/whoami`;
+
+    let options = {
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${access_token}`
+        },
+    }
+
+    try {
+        const response = await fetch(url, options)
+        return response.json();
+    } catch (error) {
+        throw error
+    }
+
+}
+
+
 export const registerOauthClient = async (registration_endpoint: string) => {
 
     if(!registration_endpoint) {
