@@ -13,6 +13,10 @@ export const load: LayoutServerLoad = async ({ fetch, params, url, cookies, requ
     const user_id = cookies.get('user_id');
     const device_id = cookies.get('device_id');
 
+    if(!access_token || !refresh_token) {
+        redirect(302, '/login');
+    }
+
     const oidc_client_id = cookies.get('oidc_client_id');
 
     let data = {};

@@ -29,7 +29,7 @@
 }
 
 :root {
-    --background: hsla(0, 0%, 7%, 1);
+    --background: hsla(0, 0%, 0%, 1);
     --text: hsla(0, 0%, 90%, 1);
 
     --col-50: oklch(0.985 0 0);

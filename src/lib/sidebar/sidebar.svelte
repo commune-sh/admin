@@ -29,9 +29,9 @@ let sections = [
 ]
 </script>
 
-    <div class="w-60 bg-col-900 text-white">
-        <div class="p-4">
-            <h2 class="text font-semibold mb-4">Matrix Admin</h2>
+    <div class="w-60 bg-col-950 text-white">
+        <div class="p-4 flex gap-2">
+            <h2 class="text font-semibold mb-4 text-col-300">Admin</h2>
         </div>
         <div class="mt-2 text-sm text-col-400">
 
