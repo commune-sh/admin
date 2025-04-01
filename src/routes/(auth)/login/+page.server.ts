@@ -30,11 +30,15 @@ export const load: PageServerLoad = async ({ cookies, parent }) => {
 
     let url = `${authorization_endpoint}?client_id=${oidc_client_id}&redirect_uri=${redirect_url}&response_type=code&response_mode=query&scope=${scope}&state=${pkce.state}&code_challenge=${pkce.code_challenge}&code_challenge_method=S256`;
 
-    let encoded_url = encodeURI(url);
+    url = encodeURI(url);
 
-    console.log('Redirecting to:', encoded_url);
+    //console.log('Redirecting to:', encoded_url);
 
-    redirect(302, encoded_url);
+    //redirect(302, encoded_url);
 
+    return {
+        data,
+        url
+    }
 };
 
