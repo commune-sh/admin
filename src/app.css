@@ -22,8 +22,14 @@
     --color-col-950: var(--col-950);
 }
 
+@font-face {
+    font-family: 'Overpass Mono';
+    src: url('/fonts/OverpassMono-VariableFont_wght.ttf');
+    font-display: swap;
+}
+
 :root {
-    --background: hsla(0, 0%, 0%, 1);
+    --background: hsla(0, 0%, 7%, 1);
     --text: hsla(0, 0%, 90%, 1);
 
     --col-50: oklch(0.985 0 0);
@@ -48,6 +54,8 @@ html {
 }
 
 body {
+    background: var(--background);
+    color: var(--text);
     font-family: "Inter", "Twemoji", "Apple Color Emoji", "Segoe UI Emoji", "Arial", "Helvetica", sans-serif, "STIXGeneral", "Noto Color Emoji";
     font-weight: normal;
     font-size: 1rem;
@@ -73,4 +81,11 @@ button {
 
 button:hover {
     background-color: var(--col-700);
+}
+
+.mono {
+    font-family: "Overpass Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    line-height: 1;
 }
