@@ -32,13 +32,15 @@ export const load: PageServerLoad = async ({ cookies, parent }) => {
 
     url = encodeURI(url);
 
-    //console.log('Redirecting to:', encoded_url);
+    console.log('Redirecting to:', url);
 
-    //redirect(302, encoded_url);
+    redirect(302, url);
 
+    /*
     return {
         data,
         url
     }
+    */
 };
 
